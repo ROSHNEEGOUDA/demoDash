@@ -19,18 +19,20 @@ import FormPage from './components/Registration/FormPage';
 import OathFormPage from './components/Registration/VolunteerOth';
 import Message from './components/Registration/Message';
 import InductionPage from './components/Starting Page/InductionPage';
+import Auth from "./components/Signup/testpage"
+import Profile from './components/Profile/Profile';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<InductionPage />} />
-        <Route path='/loginPage' element={<Login />} />
+        <Route path='/' element={<Auth />} />
+        {/* <Route path='/' element={<InductionPage />} /> */}
         <Route path='/register' element={<VolunteerRegistration />} />
         <Route path='/formpage' element={<FormPage />} />
         <Route path='/volunteerOath' element={<OathFormPage />} />
         <Route path='/message' element={<Message />} />
-        <Route path='/homepage' element={<Layout><HomePage /></Layout>} />
+        <Route path='/homepage' element={<Layout><HomePage/></Layout>} />
         <Route path='/homepage/activities' element={<Layout><Activities /></Layout>} />
         <Route path='/homepage/activites/activity' element={<Layout><Activity /></Layout>} />
         <Route path='/homepage/activites/activity/documentupload' element={<Layout><DocumentUploadPage /></Layout>} />
@@ -42,6 +44,8 @@ function App() {
         <Route path='/leaderboard' element={<Layout><LeaderBoard /></Layout>} />
         <Route path='/report' element={<Layout><Report /></Layout>} />
         <Route path='/reportForm' element={<Layout><ReportForm /></Layout>} />
+        <Route path='/reportForm' element={<Layout><ReportForm /></Layout>} />
+        <Route path='/profile' element={<Layout><Profile /></Layout>} />
       </Routes>
     </Router>
   );
